@@ -1,5 +1,6 @@
 {
   "name": "app",
+  "homepage": "https://agemda.github.io/agemda",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -36,6 +37,7 @@
     "file-loader": "1.1.5",
     "formdata-polyfill": "^3.0.9",
     "fs-extra": "3.0.1",
+    "gh-pages": "^1.1.0",
     "graphql": "^0.12.3",
     "graphql-tag": "^2.6.1",
     "html-webpack-plugin": "2.29.0",
@@ -66,6 +68,8 @@
     "wysiwyg.css": "^0.0.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
